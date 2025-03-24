@@ -6,7 +6,7 @@
  * See LICENSE file in the project root for license information.
 */
 
-a SWISH version of this program is available: https://swish.swi-prolog.org/p/HaEfmQok.pl
+% SWISH version of this program is available: https://swish.swi-prolog.org/p/saPQDdZf.pl
 %:- use_rendering( graphviz ). 
 
 %
@@ -635,14 +635,15 @@ D = [[[a, b, c], [a, b, c]], [[a, b, c], [a, c, b]], ...
 % GS-type dictatorial domains: ring partiton and dictatorial sequence
 %-----------------------------------------------------------------
 
-gs_ring( 1, [
-	[[a,c,b],[b,c,a]], %  -  -  -  -  -  -  
+gs_ring_index( [ [2, 4], [2, 5], [3, 1], [3, 5], [6, 1], [6, 4] ] ).
+gs_ring( 1, H ):- gs_ring_index( X ),indexed_profiles( X, H ).
+/*	[[a,c,b],[b,c,a]], %  -  -  -  -  -  -  
 	[[a,c,b],[c,a,b]], %  -  -  -  1  2  -  
 	[[b,a,c],[a,b,c]], %  3  -  -  -  4  -  
 	[[b,a,c],[c,a,b]], %  -  -  -  -  -  - 
 	[[c,b,a],[a,b,c]], %  -  -  -  -  -  -  
 	[[c,b,a],[b,c,a]]  %  5  -  -  6  -  -  
-] ).
+*/
 
 gs_ring( 2, D ):-
     gs_ring( 1, A ),
