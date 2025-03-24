@@ -533,7 +533,8 @@ dasgupta1999( D ):-
 	 dasgupta1999( modified, A ),
 	 findall( C, ( member( B, A ), maplist( atom_chars, B, C ) ), D ).
 
-%　alternatives( [x,y,z] ).
+%　=> alternatives( [x,y,z] ).
+%　=> number_of_persons( 3 ).
 
 /*
 
@@ -572,6 +573,33 @@ Z = dict
 5:[z,x,y]  13 -  -  12 -  3
 6:[z,y,x]  -  7  2  -  -  -
 --dict
+*/
+
+:- dynamic alternatives/1.
+:- dynamic number_of_persons/1.
+
+swich_model( N, Alt ):-
+     abolish( alternatives/1 ), 
+     abolish( number_of_persons/1), 
+     assert( alternatives( Alt ) ), 
+     assert( number_of_persons( N ) ).
+ 
+/*
+ ?- switch_model( 3, [x,y,z] ).
+ ?- hist((dasgupta1999(L), between(16,19,K), select_n( D, L, K ), check_scf( arrow-type, D,
+W), setof(X, P^Z^(member(P,D),profile_as_0_1_pattern( P, Z ), member( X, Z )), S ), length(
+ S, J) ), K:J:W ).
+
+ (16:22:poss):15
+ (16:23:poss):234
+ (16:24:poss):720
+ (17:23:poss):15
+ (17:24:poss):156
+ (18:24:poss):19
+ (19:24:dict):1
+total:1160
+true.
+?- switch_model( 2, [a,b,c] ).
 
 */
 
