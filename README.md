@@ -38,7 +38,7 @@ GitHub Codespacesを使用してクラウド環境で試す場合、以下の手
 1. Prologファイルをエディタで開きます
 2. 次のようにターミナルからコードを実行します：
    ```bash
-   swipl sct_logic.pl
+   swipl -s logical_scf.pl
    ```
 
 ### 4. **クエリを実行**
