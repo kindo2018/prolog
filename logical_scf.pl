@@ -79,6 +79,13 @@ manipulable( 1, [ R, Q ] - S, [ P, Q ] - T, F ):-
 manipulable( 2, [ R, Q ] - S, [ R, W ] - T, F ):-
 	 member( [ R, W ] - T, F ),
 	 ( p( T, S, Q ); p( S, T, W ) ).
+manipulable_n( J, PP - S, F ):-
+ 	member( PP1 - T, F ),
+	append( A, [ R | B ], PP ),
+	append( A, [ Q | B ], PP1 ),
+	length( [ _ | A ], J ),
+	( p( T, S, R ); p( S, T, Q ) ).
+
 %以上の準備から，基本ケースのGS定理およびArrowの定理を自動証明することができる． 
 prove( A ):-
 	 unrestricted_domain( U ),
