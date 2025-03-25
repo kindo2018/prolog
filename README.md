@@ -4,7 +4,7 @@
 このREADMEは、GitHubリポジトリに掲載する論文[1]のソースコードとその使い方を簡単に説明し、読者が手軽に試せるように設計されています。
 なおgraphvizを使った視覚化の部分（fig8(_), fig10(_)など）はSWISH上で再現できます．
 
-犬童 健良(2025). 論理プログラミングを用いた抽象的社会選択関数における耐戦略性の実験的研究.関東学園大学区経済学紀要,51,1-61. KENRYO INDO(2025). Experimental Study of Strategy-Proofness in Abstract Social Choice Functions Using Logic Programming. Research Buletin of Economics, Kanto Gakuen University, 51, 1-61. (Japanese)
+犬童 健良(2025). 論理プログラミングを用いた抽象的社会選択関数における耐戦略性の実験的研究.関東学園大学区経済学紀要,51,1-61. KENRYO INDO(2025). Experimental Study of Strategy-Proofness in Abstract Social Choice Functions Using Logic Programming. Research Bulletin of Economics, Kanto Gakuen University, 51, 1-61. (Japanese)
 
 ## 概要
 
