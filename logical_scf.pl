@@ -7,7 +7,6 @@
 */
 
 % SWISH version of this program is available: https://swish.swi-prolog.org/p/saPQDdZf.pl
-%:- use_rendering( graphviz ). 
 
 %
 alternatives( [a,b,c] ).
@@ -604,8 +603,6 @@ true.
 */
 
 
-
-
 %-----------------------------------------------------------------
 % block of best alternatives 
 %-----------------------------------------------------------------
@@ -704,7 +701,7 @@ current_partition( block, [block(_,_)] ).
 current_partition( ring ).
 
 partition_domain( X, D ):-
-    current_partition( P ), member( X, P ), db_partition_domain( X, D ).
+    current_partition( P ), current_partition( P, C ), member( X, C ), db_partition_domain( X, D ).
 
 partition_domain_for_short( arrow_ring(J), a(J) ).
 partition_domain_for_short( gs_ring(J), g(J) ).
@@ -782,6 +779,7 @@ dict_edge( K, S, J, D, X, D1 ):-
 	 Z = dict,
 	 check_scf( A-type, D1, Z ).
 
+%:- use_rendering( graphviz ). 
 graph_of_dict_sequence( digraph( [ rankdir = 'TB' | Graph ] ) ):-
 	 findall(edge(((P)-> (Q)), [label=J]), (
 		 dict_edge( _, S, J, _, _, _ ), 
@@ -866,6 +864,7 @@ fig( domain, D ):-
 	 fig( gs-type,  F ),
 	 !.
 fig( membership, D ):-
+	 \+ \+ clause( partition_membership( _, _ ), _ ),
 	 partition_membership( D, F ),
 	 fig( gs-type,  F ),
 	 !.
