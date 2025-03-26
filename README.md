@@ -20,7 +20,7 @@
 ### 1. **リポジトリをクローン**
 まず、このリポジトリをローカル環境またはCodespaceにクローンしてください：
 ```bash
-git clone https://github.com/your-repo-name.git
+git clone https://github.com/kindo2018/prolog
 ```
 
 ### 2. **Codespacesでのセットアップ**
