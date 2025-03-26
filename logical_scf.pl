@@ -694,19 +694,22 @@ db_partition_domain( gs_ring(2), D ):- gs_ring( 2, D ).
 db_partition_domain( pareto_ring(A), D ):- x( A ), pareto_ring( A, D ).
 db_partition_domain( block(A,B), D ):- x(A), x(B), best_alternatives_block( [A,B], D ).
 
-current_partition( ring, [arrow_ring(_), gs_ring(_), pareto_ring(_)] ).
-current_partition( block, [block(_,_)] ).
+db_partition_domain_for_short( arrow_ring(J), a(J) ).
+db_partition_domain_for_short( gs_ring(J), g(J) ).
+db_partition_domain_for_short( pareto_ring(J), p(J) ).
+db_partition_domain_for_short( block(A,B), b(A,B) ).
+
+current_partition( ring, X ):- member( X, [arrow_ring(_), gs_ring(_), pareto_ring(_)] ).
+current_partition( block, block(_,_) ).
 
 :- dynamic current_partition/1. 
 current_partition( ring ).
 
 partition_domain( X, D ):-
-    current_partition( P ), current_partition( P, C ), member( X, C ), db_partition_domain( X, D ).
+    current_partition( P ), current_partition( P, X ), db_partition_domain( X, D ).
 
-partition_domain_for_short( arrow_ring(J), a(J) ).
-partition_domain_for_short( gs_ring(J), g(J) ).
-partition_domain_for_short( pareto_ring(J), p(J) ).
-partition_domain_for_short( block(A,B), b(A,B) ).
+partition_domain_for_short( X, S ):-
+    current_partition( P ), current_partition( P, X ), db_partition_domain_for_short( X, S ).
 
 partition_membership( P, D, X ):-
 	 member( P, D ),
@@ -721,11 +724,10 @@ partition_membership( D, F ):-
 	 ), F ).
 
 composite_partitions( K, S, D ):-
-	 ( var( S )->
 	 findall( A, partition_domain(A, X), L ),
 	 length( L, N ),
-	 between( 1, N, K ) ; true ),
-	 select_n( S, L, K ),
+	 between( 1, N, K ),
+	 ( \+ var( S )-> length( S, K ); select_n( S, L, K ) ),
 	 findall( P,(
 		 member( A, S ),
 		 partition_domain( A, X ),
