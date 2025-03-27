@@ -1,6 +1,8 @@
 ﻿/* social choice theory in prolog: 
  integrated generation of the Gibbard-Satterthwaite-type and Arrow-type scfs
- extended with a logical formula translator  
+ extended with a logical formula translator: web supplement of Indo, K., 
+ Experimental Study of Strategy-Proofness in Abstract Social Choice Functions Using Logic Programming. Research Bulletin of Economics, Kanto Gakuen University, 51, 1-64. (Japanese) 
+*/
  * Copyright © 2025 Kenryo Indo
  * Licensed under the MIT License.
  * See LICENSE file in the project root for license information.
