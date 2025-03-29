@@ -9,10 +9,9 @@
 ## 概要
 
 本リポジトリには以下の内容が含まれています：
-- **論文に記載された完全なコード（サンプル実行のデモを含む）**
-- **実行環境の設定手順**: SWI-Prologを活用した実行環境の簡単なセットアップ
-
-- **SWISHノートブック.[https://swish.swi-prolog.org/p/MQQYngUl.swinb].**: ノートブックのコピー.[MQQYngUl.swinb.txt].
+- **論文に記載された完全なコード（サンプル実行のデモを含む）**: logical_scf.pl
+- **実行環境の設定手順**: SWI-Prologを活用した実行環境の簡単なセットアップ:本ファイル
+- **SWISHノートブック.（外部サイト）[https://swish.swi-prolog.org/p/MQQYngUl.swinb].**: ノートブックのコピー MQQYngUl.swinb.txt
 
 ---
 ## 使い方
