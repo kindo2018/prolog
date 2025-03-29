@@ -12,6 +12,8 @@
 - **論文に記載された完全なコード（サンプル実行のデモを含む）**
 - **実行環境の設定手順**: SWI-Prologを活用した実行環境の簡単なセットアップ
 
+- **SWISHノートブック.[https://swish.swi-prolog.org/p/MQQYngUl.swinb].**: ノートブックのコピー.[MQQYngUl.swinb.txt].
+
 ---
 ## 使い方
 
