@@ -5,7 +5,7 @@
 なおgraphvizを使った視覚化の部分（fig8(G), fig10(G)など）はSWISH上で再現できます．
 
 [1]犬童 健良(2025). 論理プログラミングを用いた抽象的社会選択関数における耐戦略性の実験的研究.関東学園大学経済学紀要,51,1-64. KENRYO INDO(2025). Experimental Study of Strategy-Proofness in Abstract Social Choice Functions Using Logic Programming. Research Bulletin of Economics, Kanto Gakuen University, 51, 1-64. (Japanese) DOI:
-[https://doi.org/10.20589/kantogakueneconomics.51.0_1] (https://doi.org/10.20589/kantogakueneconomics.51.0_1)
+[https://doi.org/10.20589/kantogakueneconomics.51.0_1](https://doi.org/10.20589/kantogakueneconomics.51.0_1)
 
 ## 概要
 
