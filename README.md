@@ -1,6 +1,9 @@
 # prologを用いた抽象的社会選択関数における耐戦略性の実験
 
 [このリポジトリ](https://github.com/kindo2018/prolog/)には犬童(2025)内に掲載されている実験を再現するソースコードが含まれています。このコードは論文内でも記述されており，論文内のほぼすべての結果を再現するために使用できます．
+
+[使い方などをAIに説明させる](https://gemini.google.com/gem/15QN8AzjiohNTfc8FjT8DFijGc-RO09bk?usp=sharing)
+
 このREADMEは、GitHubリポジトリに掲載する論文[1]のソースコードとその使い方を簡単に説明し、読者が手軽に試せるように設計されています。
 なおgraphvizを使った視覚化の部分（fig8(G), fig10(G)など）はSWISH上で再現できます．
 
