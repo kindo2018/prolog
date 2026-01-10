@@ -1,5 +1,8 @@
 # prologを用いた抽象的社会選択関数における耐戦略性の実験
 
+scf2025.plをソースコードに追加しました．nm_domain/7でn人m代替案の環境を作ります．選好順序を文字列結合で表示します．
+Issuue１～９にあげた事項への対処を部分的に含みます．
+
 [このリポジトリ](https://github.com/kindo2018/prolog/)には犬童(2025)内に掲載されている実験を再現するソースコードが含まれています。このコードは論文内でも記述されており，論文内のほぼすべての結果を再現するために使用できます．
 
 [使い方などをAIに説明させる](https://gemini.google.com/gem/15QN8AzjiohNTfc8FjT8DFijGc-RO09bk?usp=sharing)
